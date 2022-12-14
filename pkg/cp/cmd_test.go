@@ -4,7 +4,7 @@
 
 // created by Manoel Vilela <manoel_vilela@engineer.com>
 
-package main
+package cp
 
 import (
 	"bufio"
@@ -20,7 +20,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/cp"
 	"github.com/u-root/u-root/pkg/uio"
 	"golang.org/x/sys/unix"
 )
@@ -30,15 +29,6 @@ const (
 	maxDirDepth = 5
 	maxFiles    = 5
 )
-
-// resetFlags is used to reset the cp flags to default
-func resetFlags() {
-	f.recursive = false
-	f.ask = false
-	f.force = false
-	f.verbose = false
-	f.noFollowSymlinks = false
-}
 
 // randomFile create a random file with random content
 func randomFile(fpath, prefix string) (*os.File, error) {
@@ -123,7 +113,7 @@ func TestRunSimple(t *testing.T) {
 				ask: true,
 			},
 			input:   "no\n",
-			wantErr: cp.ErrSkip,
+			wantErr: ErrSkip,
 		},
 		{
 			name: "Verbose",
@@ -131,12 +121,12 @@ func TestRunSimple(t *testing.T) {
 			flag: flags{
 				verbose: true,
 			},
-			wantErr: cp.ErrSkip,
+			wantErr: ErrSkip,
 		},
 		{
 			name:    "SameFile-NoFlags",
 			args:    []string{file1.Name(), file1.Name()},
-			wantErr: cp.ErrSkip,
+			wantErr: ErrSkip,
 		},
 		{
 			name:    "NoFlags-Fail-SrcNotExist",
@@ -159,15 +149,15 @@ func TestRunSimple(t *testing.T) {
 			var inBuf bytes.Buffer
 			fmt.Fprintf(&inBuf, "%s", tt.input)
 			in := bufio.NewReader(&inBuf)
-			if err := run(tt.args, tt.flag, &out, in); err != nil {
+			if err := run(RunParams{Stdin: in, Stderr: &out}, tt.args, tt.flag); err != nil {
 				if !errors.Is(err, tt.wantErr) {
 					t.Errorf(`run(tt.args, tt.flag, &out, in) = %q, not %q`, err.Error(), tt.wantErr)
 				}
 				return
 			}
 
-			if err := IsEqualTree(cp.Default, tt.args[0], tt.args[1]); err != nil {
-				t.Errorf(`EqualTree(cp.Default, tt.args[0], tt.args[1]) = %q, not nil`, err)
+			if err := IsEqualTree(Default, tt.args[0], tt.args[1]); err != nil {
+				t.Errorf(`EqualTree(Default, tt.args[0], tt.args[1]) = %q, not nil`, err)
 			}
 		})
 
@@ -183,8 +173,8 @@ func TestRunSimple(t *testing.T) {
 			if errors.Is(err, fs.ErrNotExist) {
 				return
 			}
-			if err := f(tt.args[0], tt.args[1], srcfi); !errors.Is(err, cp.ErrSkip) {
-				t.Logf(`preCallback(tt.args[0], tt.args[1], srcfi) = %q, not cp.ErrSkip`, err)
+			if err := f(tt.args[0], tt.args[1], srcfi); !errors.Is(err, ErrSkip) {
+				t.Logf(`preCallback(tt.args[0], tt.args[1], srcfi) = %q, not ErrSkip`, err)
 			}
 		})
 
@@ -205,7 +195,6 @@ func TestRunSimple(t *testing.T) {
 // cmd-line equivalent: cp ~/dir ~/dir2
 func TestCpSrcDirectory(t *testing.T) {
 	var f flags
-	defer resetFlags()
 
 	tempDir := t.TempDir()
 	tempDirTwo := t.TempDir()
@@ -214,7 +203,7 @@ func TestCpSrcDirectory(t *testing.T) {
 	var logBytes bytes.Buffer
 	var in bufio.Reader
 
-	if err := run([]string{tempDir, tempDirTwo}, f, &logBytes, &in); err != nil {
+	if err := run(RunParams{Stdin: &in, Stderr: &logBytes}, []string{tempDir, tempDirTwo}, f); err != nil {
 		t.Fatalf(`run([]string{tempDir, tempDirTwo}, f, &logBytes, &in) = %q, not nil`, err)
 	}
 
@@ -232,7 +221,6 @@ func TestCpSrcDirectory(t *testing.T) {
 func TestCpRecursive(t *testing.T) {
 	var f flags
 	f.recursive = true
-	defer resetFlags()
 
 	tempDir := t.TempDir()
 
@@ -257,8 +245,8 @@ func TestCpRecursive(t *testing.T) {
 		}
 		// Because dstDir already existed, a new dir was created inside it.
 		realDestination := filepath.Join(dstDir, filepath.Base(srcDir))
-		if err := IsEqualTree(cp.Default, srcDir, realDestination); err != nil {
-			t.Fatalf(`IsEqualTree(cp.Default, srcDir, realDestination) = %q, not nil`, err)
+		if err := IsEqualTree(Default, srcDir, realDestination); err != nil {
+			t.Fatalf(`IsEqualTree(Default, srcDir, realDestination) = %q, not nil`, err)
 		}
 	})
 
@@ -270,8 +258,8 @@ func TestCpRecursive(t *testing.T) {
 			t.Fatalf(`run([]string{srcDir, notExistDstDir}, f, &out, &in) = %q, not nil`, err)
 		}
 
-		if err := IsEqualTree(cp.Default, srcDir, notExistDstDir); err != nil {
-			t.Fatalf(`IsEqualTree(cp.Default, srcDir, notExistDstDir) = %q, not nil`, err)
+		if err := IsEqualTree(Default, srcDir, notExistDstDir); err != nil {
+			t.Fatalf(`IsEqualTree(Default, srcDir, notExistDstDir) = %q, not nil`, err)
 		}
 	})
 }
@@ -288,7 +276,6 @@ func TestCpRecursive(t *testing.T) {
 func TestCpRecursiveMultiple(t *testing.T) {
 	var f flags
 	f.recursive = true
-	defer resetFlags()
 	tempDir := t.TempDir()
 
 	dstTest := filepath.Join(tempDir, "destination")
@@ -324,8 +311,8 @@ func TestCpRecursiveMultiple(t *testing.T) {
 		_, srcFile := filepath.Split(src)
 
 		dst := filepath.Join(dstTest, srcFile)
-		if err := IsEqualTree(cp.Default, src, dst); err != nil {
-			t.Fatalf(`IsEqualTree(cp.Default, src, dst) = %q, not nil`, err)
+		if err := IsEqualTree(Default, src, dst); err != nil {
+			t.Fatalf(`IsEqualTree(Default, src, dst) = %q, not nil`, err)
 		}
 	}
 }
@@ -350,7 +337,6 @@ func TestCpSymlink(t *testing.T) {
 	}
 
 	t.Run("no-follow-symlink", func(t *testing.T) {
-		defer resetFlags()
 		var out bytes.Buffer
 		var in bufio.Reader
 		var f flags
@@ -360,13 +346,12 @@ func TestCpSymlink(t *testing.T) {
 		if err := run([]string{newName, dst}, f, &out, &in); err != nil {
 			t.Fatalf(`run([]string{newName, dst}, f, &out, &in) = %q, not nil`, err)
 		}
-		if err := IsEqualTree(cp.NoFollowSymlinks, newName, dst); err != nil {
-			t.Fatalf(`IsEqualTree(cp.NoFollowSymlinks, newName, dst) =%q, not nil`, err)
+		if err := IsEqualTree(NoFollowSymlinks, newName, dst); err != nil {
+			t.Fatalf(`IsEqualTree(NoFollowSymlinks, newName, dst) =%q, not nil`, err)
 		}
 	})
 
 	t.Run("follow-symlink", func(t *testing.T) {
-		defer resetFlags()
 		var out bytes.Buffer
 		var in bufio.Reader
 		var f flags
@@ -376,8 +361,8 @@ func TestCpSymlink(t *testing.T) {
 		if err := run([]string{newName, dst}, f, &out, &in); err != nil {
 			t.Fatalf(`run([]string{newName, dst}, f, &out, &in) =%q, not nil`, err)
 		}
-		if err := IsEqualTree(cp.Default, newName, dst); err != nil {
-			t.Fatalf(`IsEqualTree(cp.Default, newName, dst) = %q, not nil`, err)
+		if err := IsEqualTree(Default, newName, dst); err != nil {
+			t.Fatalf(`IsEqualTree(Default, newName, dst) = %q, not nil`, err)
 		}
 	})
 }
@@ -413,7 +398,7 @@ func readDirNames(path string) ([]string, error) {
 	return basenames, nil
 }
 
-func stat(o cp.Options, path string) (os.FileInfo, error) {
+func stat(o Options, path string) (os.FileInfo, error) {
 	if o.NoFollowSymlinks {
 		return os.Lstat(path)
 	}
@@ -421,7 +406,7 @@ func stat(o cp.Options, path string) (os.FileInfo, error) {
 }
 
 // IsEqualTree compare the content in the file trees in src and dst paths
-func IsEqualTree(o cp.Options, src, dst string) error {
+func IsEqualTree(o Options, src, dst string) error {
 	srcInfo, err := stat(o, src)
 	if err != nil {
 		return err

@@ -2,8 +2,11 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package main
+//go:build !plan9
+// +build !plan9
 
-import "fmt"
+package cp
 
-var eNotDir = fmt.Errorf("not a directory")
+import "golang.org/x/sys/unix"
+
+const eNotDir = unix.ENOTDIR
