@@ -22,7 +22,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/u-root/u-root/pkg/strace/internal/abi"
+	"github.com/mvdan/u-root-coreutils/pkg/strace/internal/abi"
 	"golang.org/x/sys/unix"
 )
 

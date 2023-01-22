@@ -10,7 +10,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/flash/spimock"
+	"github.com/mvdan/u-root-coreutils/pkg/flash/spimock"
 )
 
 // TestSFDPReader tests reading arbitrary offsets from the SFDP.

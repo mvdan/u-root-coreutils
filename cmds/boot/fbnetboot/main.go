@@ -26,9 +26,9 @@ import (
 	"github.com/insomniacslk/dhcp/iana"
 	"github.com/insomniacslk/dhcp/interfaces"
 	"github.com/insomniacslk/dhcp/netboot"
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/crypto"
-	"github.com/u-root/u-root/pkg/ntpdate"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/crypto"
+	"github.com/mvdan/u-root-coreutils/pkg/ntpdate"
 )
 
 var (

@@ -24,7 +24,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/u-root/u-root/pkg/rtc"
+	"github.com/mvdan/u-root-coreutils/pkg/rtc"
 )
 
 var write = flag.Bool("w", false, "Set hwclock from system clock in UTC")

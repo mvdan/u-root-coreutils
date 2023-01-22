@@ -20,12 +20,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/boot/ibft"
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/boot/multiboot/internal/trampoline"
-	"github.com/u-root/u-root/pkg/boot/util"
-	"github.com/u-root/u-root/pkg/ubinary"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/ibft"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot/internal/trampoline"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/util"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 const bootloader = "u-root kexec"

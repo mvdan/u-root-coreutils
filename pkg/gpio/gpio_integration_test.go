@@ -10,12 +10,12 @@ package gpio
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegration(t *testing.T) {
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/gpio"}, &vmtest.Options{
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/gpio"}, &vmtest.Options{
 		QEMUOpts: qemu.Options{
 			// Make GPIOs nums 10 to 20 available through the
 			// mockup driver.

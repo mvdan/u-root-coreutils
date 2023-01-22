@@ -12,9 +12,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/multiboot"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 func TestParse(t *testing.T) {

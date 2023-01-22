@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 func TestUserSpecSet(t *testing.T) {

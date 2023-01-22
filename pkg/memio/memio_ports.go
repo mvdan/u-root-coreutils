@@ -9,7 +9,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/u-root/u-root/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
 )
 
 // Reader is the interface for reading from memory and IO ports.

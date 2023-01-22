@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/pci"
+	"github.com/mvdan/u-root-coreutils/pkg/pci"
 )
 
 func TestPCIExecution(t *testing.T) {

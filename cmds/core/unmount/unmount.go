@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/namespace"
+	"github.com/mvdan/u-root-coreutils/pkg/namespace"
 )
 
 func main() {

@@ -17,8 +17,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/sh"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/sh"
 	"golang.org/x/sys/unix"
 )
 

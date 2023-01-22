@@ -9,8 +9,8 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/u-root/u-root/pkg/flash"
-	"github.com/u-root/u-root/pkg/spidev"
+	"github.com/mvdan/u-root-coreutils/pkg/flash"
+	"github.com/mvdan/u-root-coreutils/pkg/spidev"
 )
 
 type spidevProgrammer struct {

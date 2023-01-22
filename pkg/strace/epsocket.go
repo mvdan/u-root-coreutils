@@ -19,7 +19,7 @@ import (
 	"encoding/binary"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
 	"golang.org/x/sys/unix"
 )
 

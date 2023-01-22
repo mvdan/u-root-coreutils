@@ -15,7 +15,7 @@ import (
 	"os"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/ts"
+	"github.com/mvdan/u-root-coreutils/pkg/ts"
 )
 
 var (

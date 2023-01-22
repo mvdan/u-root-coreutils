@@ -18,7 +18,7 @@ import (
 	"time"
 	"unsafe"
 
-	// "github.com/u-root/u-root/pkg/termios"
+	// "github.com/mvdan/u-root-coreutils/pkg/termios"
 	"golang.org/x/sys/unix"
 )
 

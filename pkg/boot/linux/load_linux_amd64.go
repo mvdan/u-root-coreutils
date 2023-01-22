@@ -11,10 +11,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/u-root/u-root/pkg/boot/bzimage"
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/boot/purgatory"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/bzimage"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/purgatory"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 const (

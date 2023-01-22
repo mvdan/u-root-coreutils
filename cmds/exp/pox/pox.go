@@ -102,11 +102,11 @@ import (
 	"syscall"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/cp"
-	"github.com/u-root/u-root/pkg/ldd"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/loop"
-	"github.com/u-root/u-root/pkg/uzip"
+	"github.com/mvdan/u-root-coreutils/pkg/cp"
+	"github.com/mvdan/u-root-coreutils/pkg/ldd"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/loop"
+	"github.com/mvdan/u-root-coreutils/pkg/uzip"
 )
 
 const usage = "pox [-[-verbose]|v] -[-run|r] | -[-create]|c  [-[-file]|f tcz-file] file [...file]"

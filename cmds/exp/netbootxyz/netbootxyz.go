@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/boot/menu"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/menu"
 	"gopkg.in/yaml.v2"
 )
 

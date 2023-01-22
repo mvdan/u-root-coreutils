@@ -7,7 +7,7 @@ package main
 import (
 	"os"
 
-	"github.com/u-root/u-root/pkg/cp"
+	"github.com/mvdan/u-root-coreutils/pkg/cp"
 )
 
 func main() {

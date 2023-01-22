@@ -13,9 +13,9 @@ import (
 	"testing"
 
 	gbbgolang "github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/vmtest/internal/json2test"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest/internal/json2test"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -140,11 +140,11 @@ func GolangTest(t *testing.T, pkgs []string, o *Options) {
 	}
 
 	// Create the CPIO and start QEMU.
-	o.BuildOpts.AddBusyBoxCommands("github.com/u-root/u-root/cmds/core/*")
+	o.BuildOpts.AddBusyBoxCommands("github.com/mvdan/u-root-coreutils/cmds/core/*")
 	o.BuildOpts.AddCommands(uroot.BinaryCmds("cmd/test2json")...)
 
 	// Specify the custom gotest uinit.
-	o.Uinit = "github.com/u-root/u-root/integration/testcmd/gotest/uinit"
+	o.Uinit = "github.com/mvdan/u-root-coreutils/integration/testcmd/gotest/uinit"
 
 	tc := json2test.NewTestCollector()
 	serial := []io.Writer{

@@ -14,9 +14,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot/boottest"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/boottest"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
 )
 
 // fakeDevices returns a list of fake block devices and a pool of mount points.

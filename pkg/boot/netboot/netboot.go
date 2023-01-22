@@ -16,13 +16,13 @@ import (
 	"net/url"
 	"path"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/netboot/ipxe"
-	"github.com/u-root/u-root/pkg/boot/netboot/pxe"
-	"github.com/u-root/u-root/pkg/boot/netboot/simple"
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/dhclient"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/netboot/ipxe"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/netboot/pxe"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/netboot/simple"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/dhclient"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 )
 
 // BootImages figure out a ranked order of images to boot from the given DHCP lease.

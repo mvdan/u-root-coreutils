@@ -16,9 +16,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
 )
 
 var update = flag.Bool("run-bash", false, "run bash and update golden file")

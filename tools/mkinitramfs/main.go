@@ -11,8 +11,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/uroot/initramfs"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs"
 )
 
 var outputFile = flag.String("o", "initramfs.cpio", "Initramfs output file")

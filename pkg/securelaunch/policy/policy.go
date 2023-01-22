@@ -13,12 +13,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/cmdline"
-	"github.com/u-root/u-root/pkg/mount"
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/eventlog"
-	"github.com/u-root/u-root/pkg/securelaunch/launcher"
-	"github.com/u-root/u-root/pkg/securelaunch/measurement"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/eventlog"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/launcher"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/measurement"
 )
 
 // Policy describes the policy used to drive the security engine.

@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 func TestMain(m *testing.M) {

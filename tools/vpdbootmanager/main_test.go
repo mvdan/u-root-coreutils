@@ -10,7 +10,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot/systembooter"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/systembooter"
 )
 
 func TestInvalidCommand(t *testing.T) {

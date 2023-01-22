@@ -14,8 +14,8 @@ import (
 	"time"
 
 	expect "github.com/google/goexpect"
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestESXi(t *testing.T) {

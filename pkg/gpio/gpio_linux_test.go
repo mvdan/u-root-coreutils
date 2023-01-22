@@ -7,7 +7,7 @@ package gpio
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 // GPIO allocations so the tests don't conflict with each other:

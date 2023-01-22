@@ -26,8 +26,8 @@ import (
 	"strings"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
 )
 
 // makeFileRel converts file:/// schemes to a path relative to the current
@@ -36,7 +36,7 @@ import (
 // schemes are absolute.
 //
 // For example, if the URL is
-// "file:///home/ryan/go/src/github.com/u-root/u-root/pkg/boot/grub/testdata_new/a/b/c",
+// "file:///home/ryan/go/src/github.com/mvdan/u-root-coreutils/pkg/boot/grub/testdata_new/a/b/c",
 // and the working directory is in grub, the URL is converted to
 // "file:///testdata_new/a/b/c".
 // It assumes the testdata is in a sub-directory of the test.

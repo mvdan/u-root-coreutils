@@ -17,8 +17,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/libinit"
-	"github.com/u-root/u-root/pkg/pty"
+	"github.com/mvdan/u-root-coreutils/pkg/libinit"
+	"github.com/mvdan/u-root-coreutils/pkg/pty"
 )
 
 var (

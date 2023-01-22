@@ -18,7 +18,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
 )
 
 const content = "Very simple web server"

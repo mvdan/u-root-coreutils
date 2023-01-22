@@ -31,17 +31,17 @@
 //	The "'" is needed to quote the * so forth does not think we're multiplying.
 //
 //	Here is a breakdown, running msr with each command in turn:
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ ./msr 0
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ ./msr 0
 //	0
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ ./msr 0 msr
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ ./msr 0 msr
 //	[/dev/cpu/0/msr]
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ ./msr 0 msr 0x3a
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ ./msr 0 msr 0x3a
 //	[[/dev/cpu/0/msr] 0x3a]
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ ./msr 0 msr 0x3a reg
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ ./msr 0 msr 0x3a reg
 //	[[/dev/cpu/0/msr] 58]
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ ./msr 0 msr 0x3a reg rd
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ ./msr 0 msr 0x3a reg rd
 //	[0]
-//	rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$
+//	rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$
 //
 //	To read, then write all of them
 //	(the dup is so we have the msr list at TOS -- it's just a convenience)
@@ -76,9 +76,9 @@
 //	right direction.
 //
 // The old commands remain:
-// rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ sudo ./msr r 0 0x3a
+// rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ sudo ./msr r 0 0x3a
 // [5]
-// rminnich@xcpu:~/gopath/src/github.com/u-root/u-root/cmds/core/msr$ sudo ./msr w 0 0x3a 5
+// rminnich@xcpu:~/gopath/src/github.com/mvdan/u-root-coreutils/cmds/core/msr$ sudo ./msr w 0 0x3a 5
 // [5]
 //
 // For a view of what Forth is doing, run with -d.

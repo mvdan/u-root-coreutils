@@ -14,12 +14,12 @@ import (
 	"time"
 
 	"github.com/u-root/iscsinl"
-	"github.com/u-root/u-root/pkg/cmdline"
-	"github.com/u-root/u-root/pkg/dhclient"
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/eventlog"
-	"github.com/u-root/u-root/pkg/securelaunch/policy"
-	"github.com/u-root/u-root/pkg/securelaunch/tpm"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/dhclient"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/eventlog"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/policy"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/tpm"
 )
 
 var slDebug = flag.Bool("d", false, "enable debug logs")

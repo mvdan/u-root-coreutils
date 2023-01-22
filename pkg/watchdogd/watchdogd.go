@@ -29,7 +29,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/u-root/u-root/pkg/watchdog"
+	"github.com/mvdan/u-root-coreutils/pkg/watchdog"
 	"golang.org/x/sys/unix"
 )
 

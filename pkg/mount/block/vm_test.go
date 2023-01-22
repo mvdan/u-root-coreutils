@@ -16,10 +16,10 @@ import (
 	"testing"
 
 	"github.com/rekby/gpt"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/pci"
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/pci"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // VM setup:
@@ -61,7 +61,7 @@ func TestVM(t *testing.T) {
 			},
 		},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/mount/block"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/mount/block"}, o)
 }
 
 func TestBlockDevMount(t *testing.T) {

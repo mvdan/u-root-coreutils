@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 type file struct {

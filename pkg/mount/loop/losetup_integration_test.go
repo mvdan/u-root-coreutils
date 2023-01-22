@@ -10,9 +10,9 @@ package loop
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegration(t *testing.T) {
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/mount/loop"}, nil)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/mount/loop"}, nil)
 }

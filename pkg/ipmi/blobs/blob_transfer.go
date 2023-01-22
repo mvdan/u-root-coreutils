@@ -16,7 +16,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/ipmi"
+	"github.com/mvdan/u-root-coreutils/pkg/ipmi"
 )
 
 // CRCOption is an option for sending/receiving CRCs.

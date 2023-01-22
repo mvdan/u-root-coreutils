@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 	"golang.org/x/sys/unix"
 )
 

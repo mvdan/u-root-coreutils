@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/intel-go/cpuid"
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/tpm"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/tpm"
 )
 
 const defaultCPUIDFile = "cpuid.txt"

@@ -25,7 +25,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/u-root/u-root/pkg/strace"
+	"github.com/mvdan/u-root-coreutils/pkg/strace"
 )
 
 const (

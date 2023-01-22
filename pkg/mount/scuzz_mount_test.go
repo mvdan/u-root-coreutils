@@ -10,9 +10,9 @@ package mount_test
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/mount/block"
-	"github.com/u-root/u-root/pkg/mount/scuzz"
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/scuzz"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 func TestIdentify(t *testing.T) {

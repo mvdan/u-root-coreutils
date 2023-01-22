@@ -26,7 +26,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/u-root/u-root/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
 )
 
 const minBootParamLen = 616

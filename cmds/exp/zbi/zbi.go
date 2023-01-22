@@ -19,7 +19,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/boot/zbi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/zbi"
 )
 
 func main() {

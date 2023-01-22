@@ -211,19 +211,19 @@ func newPackages(l ulog.Logger, genv golang.Environ, env Env, patterns ...string
 //   - relative and absolute paths including globs following Go's
 //     filepath.Match format.
 //
-//   - Go package paths; e.g. github.com/u-root/u-root/cmds/core/ls
+//   - Go package paths; e.g. github.com/mvdan/u-root-coreutils/cmds/core/ls
 //
-//   - Globs of Go package paths, e.g github.com/u-root/u-root/cmds/i* (using
+//   - Globs of Go package paths, e.g github.com/mvdan/u-root-coreutils/cmds/i* (using
 //     path.Match format).
 //
 //   - Go package path expansions with ..., e.g.
-//     github.com/u-root/u-root/cmds/core/...
+//     github.com/mvdan/u-root-coreutils/cmds/core/...
 //
 //   - file system paths (with globs in filepath.Match format) relative to
 //     GBB_PATH, e.g. cmds/core/ls if GBB_PATH contains $HOME/u-root.
 //
 //   - backwards compatibility: UROOT_SOURCE is a GBB_PATH, and patterns that
-//     begin with github.com/u-root/u-root/ will attempt to use UROOT_SOURCE
+//     begin with github.com/mvdan/u-root-coreutils/ will attempt to use UROOT_SOURCE
 //     first to find Go commands within.
 //
 // If a pattern starts with "-", it excludes the matching package(s).
@@ -237,15 +237,15 @@ func newPackages(l ulog.Logger, genv golang.Environ, env Env, patterns ...string
 //
 //   - ./foobar/glob*
 //
-//   - github.com/u-root/u-root/cmds/core/...
+//   - github.com/mvdan/u-root-coreutils/cmds/core/...
 //
-//   - github.com/u-root/u-root/cmds/core/ip
+//   - github.com/mvdan/u-root-coreutils/cmds/core/ip
 //
-//   - github.com/u-root/u-root/cmds/core/g*lob
+//   - github.com/mvdan/u-root-coreutils/cmds/core/g*lob
 //
 //   - GBB_PATH=$HOME/u-root:$HOME/yourproject cmds/core/* cmd/foobar
 //
-//   - UROOT_SOURCE=$HOME/u-root github.com/u-root/u-root/cmds/core/ip
+//   - UROOT_SOURCE=$HOME/u-root github.com/mvdan/u-root-coreutils/cmds/core/ip
 func NewPackages(l ulog.Logger, genv golang.Environ, env Env, names ...string) ([]*bbinternal.Package, error) {
 	ps, err := newPackages(l, genv, env, names...)
 	if err != nil {
@@ -462,7 +462,7 @@ func findDirectoryMatches(l ulog.Logger, env Env, pattern string) (bool, []strin
 	if len(env.URootSource) > 0 {
 		// Prefer urootSource to gbbPaths in this case.
 		prefixes = append([]string{"", env.URootSource}, env.GBBPath...)
-		pattern = strings.TrimPrefix(pattern, "github.com/u-root/u-root/")
+		pattern = strings.TrimPrefix(pattern, "github.com/mvdan/u-root-coreutils/")
 	}
 
 	// We track matches because we want to ignore individual files.
@@ -511,7 +511,7 @@ type Env struct {
 
 	// URootSource is a special GBBPath. It's a directory that will be used
 	// to look for u-root commands. If a u-root command is given as a
-	// pattern with the "github.com/u-root/u-root/" Go package path prefix,
+	// pattern with the "github.com/mvdan/u-root-coreutils/" Go package path prefix,
 	// URootSource will be used to find the command source.
 	//
 	// The default is to use UROOT_SOURCE env var.

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/ulog/ulogtest"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog/ulogtest"
 )
 
 func mustReadAll(r io.ReaderAt) string {

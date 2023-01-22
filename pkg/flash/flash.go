@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/u-root/u-root/pkg/flash/op"
-	"github.com/u-root/u-root/pkg/flash/sfdp"
-	"github.com/u-root/u-root/pkg/spidev"
+	"github.com/mvdan/u-root-coreutils/pkg/flash/op"
+	"github.com/mvdan/u-root-coreutils/pkg/flash/sfdp"
+	"github.com/mvdan/u-root-coreutils/pkg/spidev"
 )
 
 // sfdpMaxAddress is the highest possible SFDP address (24 bit address space).

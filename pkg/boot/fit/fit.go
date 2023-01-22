@@ -13,8 +13,8 @@ import (
 	"os"
 
 	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/dt"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/dt"
 )
 
 // Image is a Flattened Image Tree implementation for OSImage.

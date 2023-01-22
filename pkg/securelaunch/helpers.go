@@ -13,8 +13,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
 )
 
 type persistDataItem struct {

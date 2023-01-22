@@ -13,7 +13,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/u-root/u-root/pkg/pty"
+	"github.com/mvdan/u-root-coreutils/pkg/pty"
 	"golang.org/x/crypto/ssh"
 )
 

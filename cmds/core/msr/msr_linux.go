@@ -50,8 +50,8 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/u-root/u-root/pkg/forth"
-	"github.com/u-root/u-root/pkg/msr"
+	"github.com/mvdan/u-root-coreutils/pkg/forth"
+	"github.com/mvdan/u-root-coreutils/pkg/msr"
 )
 
 // let's just do MSRs for now

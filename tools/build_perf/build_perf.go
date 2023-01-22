@@ -24,7 +24,7 @@ import (
 )
 
 const (
-	cmdsPath  = "$GOPATH/src/github.com/u-root/u-root/cmds"
+	cmdsPath  = "$GOPATH/src/github.com/mvdan/u-root-coreutils/cmds"
 	gogcBegin = 50
 	gogcEnd   = 2000
 	gogcStep  = 50

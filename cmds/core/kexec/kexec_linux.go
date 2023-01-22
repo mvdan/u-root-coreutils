@@ -34,13 +34,13 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/boot/linux"
-	"github.com/u-root/u-root/pkg/boot/multiboot"
-	"github.com/u-root/u-root/pkg/boot/purgatory"
-	"github.com/u-root/u-root/pkg/cmdline"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/linux"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/purgatory"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 type options struct {

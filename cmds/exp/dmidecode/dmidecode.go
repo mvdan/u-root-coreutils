@@ -13,7 +13,7 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/u-root/u-root/pkg/smbios"
+	"github.com/mvdan/u-root-coreutils/pkg/smbios"
 )
 
 var (

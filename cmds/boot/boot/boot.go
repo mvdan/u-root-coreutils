@@ -33,14 +33,14 @@ import (
 	"log"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/bootcmd"
-	"github.com/u-root/u-root/pkg/boot/localboot"
-	"github.com/u-root/u-root/pkg/boot/menu"
-	"github.com/u-root/u-root/pkg/cmdline"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/bootcmd"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/localboot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/menu"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 )
 
 var (

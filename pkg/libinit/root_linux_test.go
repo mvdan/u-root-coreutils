@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/u-root/u-root/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
 )
 
 func TestLoadModule(t *testing.T) {

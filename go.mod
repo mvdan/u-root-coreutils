@@ -1,4 +1,4 @@
-module github.com/u-root/u-root
+module github.com/mvdan/u-root-coreutils
 
 go 1.19
 

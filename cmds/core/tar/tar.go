@@ -32,7 +32,7 @@ import (
 	"os"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/tarutil"
+	"github.com/mvdan/u-root-coreutils/pkg/tarutil"
 )
 
 var (

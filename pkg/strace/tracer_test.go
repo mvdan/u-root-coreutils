@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/uio/uiotest"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/uio/uiotest"
 )
 
 func prepareTestCmd(t *testing.T, cmd string) {

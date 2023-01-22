@@ -7,8 +7,8 @@ package cmos
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // Copyright 2021 the u-root Authors. All rights reserved
@@ -21,5 +21,5 @@ func TestIntegration(t *testing.T) {
 			Devices: []qemu.Device{},
 		},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/cmos"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/cmos"}, o)
 }

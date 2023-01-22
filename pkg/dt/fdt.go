@@ -16,8 +16,8 @@ import (
 	"os"
 	"unsafe"
 
-	"github.com/u-root/u-root/pkg/align"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 const (

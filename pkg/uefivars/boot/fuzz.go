@@ -19,7 +19,7 @@ import (
 go get github.com/dvyukov/go-fuzz/go-fuzz
 go get github.com/dvyukov/go-fuzz/go-fuzz-build
 
-go-fuzz-build -func FuzzParseFilePathList github.com/u-root/u-root/pkg/uefivars/boot
+go-fuzz-build -func FuzzParseFilePathList github.com/mvdan/u-root-coreutils/pkg/uefivars/boot
 go-fuzz -bin=./boot-fuzz.zip -workdir=fuzz
 ...
 */

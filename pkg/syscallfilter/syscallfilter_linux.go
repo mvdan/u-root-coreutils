@@ -17,7 +17,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/strace"
+	"github.com/mvdan/u-root-coreutils/pkg/strace"
 )
 
 const cmdUsage = "Usage: strace [-o <outputfile>] <command> [args...]"

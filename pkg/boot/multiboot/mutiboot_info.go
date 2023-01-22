@@ -5,7 +5,7 @@
 package multiboot
 
 import (
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 type esxBootInfoInfo struct {

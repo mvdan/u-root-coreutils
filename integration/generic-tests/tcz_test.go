@@ -11,9 +11,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestTczclient(t *testing.T) {

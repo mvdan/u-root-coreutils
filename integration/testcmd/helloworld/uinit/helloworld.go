@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/u-root/u-root/integration/testcmd/common"
+	"github.com/mvdan/u-root-coreutils/integration/testcmd/common"
 	"golang.org/x/sys/unix"
 )
 

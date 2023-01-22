@@ -16,8 +16,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/acpi"
-	"github.com/u-root/u-root/pkg/boot/ebda"
+	"github.com/mvdan/u-root-coreutils/pkg/acpi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/ebda"
 )
 
 func main() {

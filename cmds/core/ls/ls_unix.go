@@ -12,7 +12,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
 )
 
 func printFile(w io.Writer, stringer ls.Stringer, f file) {

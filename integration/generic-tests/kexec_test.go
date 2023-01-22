@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // TestMountKexec tests that kexec occurs correctly by checking the kernel cmdline.

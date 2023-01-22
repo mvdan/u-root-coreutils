@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/forth"
+	"github.com/mvdan/u-root-coreutils/pkg/forth"
 )
 
 var debug = flag.Bool("d", false, "Turn on forth package debugging using log.Printf")

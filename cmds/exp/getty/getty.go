@@ -20,8 +20,8 @@ import (
 	"os/exec"
 	"strconv"
 
-	"github.com/u-root/u-root/pkg/termios"
-	"github.com/u-root/u-root/pkg/upath"
+	"github.com/mvdan/u-root-coreutils/pkg/termios"
+	"github.com/mvdan/u-root-coreutils/pkg/upath"
 )
 
 var (

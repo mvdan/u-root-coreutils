@@ -38,8 +38,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 	"golang.org/x/sys/unix"
 )
 

@@ -22,8 +22,8 @@ import (
 	"log"
 	"math"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/uefi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/uefi"
 )
 
 var (

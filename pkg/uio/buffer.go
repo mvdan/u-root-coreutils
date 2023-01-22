@@ -8,8 +8,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/align"
-	"github.com/u-root/u-root/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
 )
 
 // Marshaler is the interface implemented by an object that can marshal itself

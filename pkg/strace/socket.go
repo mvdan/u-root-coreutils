@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/align"
-	"github.com/u-root/u-root/pkg/strace/internal/abi"
-	"github.com/u-root/u-root/pkg/strace/internal/binary"
-	"github.com/u-root/u-root/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/strace/internal/abi"
+	"github.com/mvdan/u-root-coreutils/pkg/strace/internal/binary"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
 	"golang.org/x/sys/unix"
 )
 

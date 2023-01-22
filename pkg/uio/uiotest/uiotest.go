@@ -8,8 +8,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // TestLineWriter is an io.Writer that logs full lines of serial to tb.

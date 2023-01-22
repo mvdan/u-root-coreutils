@@ -12,8 +12,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/u-root/u-root/pkg/flash/op"
-	"github.com/u-root/u-root/pkg/spidev"
+	"github.com/mvdan/u-root-coreutils/pkg/flash/op"
+	"github.com/mvdan/u-root-coreutils/pkg/spidev"
 	"golang.org/x/sys/unix"
 )
 

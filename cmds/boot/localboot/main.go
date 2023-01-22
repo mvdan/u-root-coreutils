@@ -12,9 +12,9 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/boot/jsonboot"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/jsonboot"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
 )
 
 // TODO backward compatibility for BIOS mode with partition type 0xee

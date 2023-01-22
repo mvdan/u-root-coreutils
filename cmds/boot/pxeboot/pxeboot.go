@@ -28,14 +28,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/bootcmd"
-	"github.com/u-root/u-root/pkg/boot/menu"
-	"github.com/u-root/u-root/pkg/boot/netboot"
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/dhclient"
-	"github.com/u-root/u-root/pkg/sh"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/bootcmd"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/menu"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/netboot"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/dhclient"
+	"github.com/mvdan/u-root-coreutils/pkg/sh"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 
 	"github.com/insomniacslk/dhcp/dhcpv4"
 )

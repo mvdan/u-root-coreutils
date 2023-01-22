@@ -11,10 +11,10 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/u-root/u-root/pkg/boot/image"
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/dt"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/image"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/dt"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 	"golang.org/x/sys/unix"
 )
 

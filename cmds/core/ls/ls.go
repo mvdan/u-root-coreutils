@@ -31,7 +31,7 @@ import (
 	"text/tabwriter"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
 )
 
 var (

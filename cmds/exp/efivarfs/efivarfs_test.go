@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/efivarfs"
+	"github.com/mvdan/u-root-coreutils/pkg/efivarfs"
 )
 
 type failingOS struct {

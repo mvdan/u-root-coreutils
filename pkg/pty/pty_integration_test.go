@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegration(t *testing.T) {
@@ -21,5 +21,5 @@ func TestIntegration(t *testing.T) {
 			Timeout: 120 * time.Second,
 		},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/pty"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/pty"}, o)
 }

@@ -167,7 +167,7 @@ func (p *Package) nextInit(addToCallList bool) *ast.Ident {
 // importName finds the package path to import, given the go/types pkg path.
 //
 // E.g. go/types uses the fully vendored name of a package, such as
-// github.com/u-root/u-root/vendor/golang.org/x/sys/unix. importName returns
+// github.com/mvdan/u-root-coreutils/vendor/golang.org/x/sys/unix. importName returns
 // the name that should appear in the import statement for this package, which
 // is golang.org/x/sys/unix.
 //

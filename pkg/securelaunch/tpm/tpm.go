@@ -15,9 +15,9 @@ import (
 	"log"
 
 	"github.com/google/go-tpm/tpm2"
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/eventlog"
-	"github.com/u-root/u-root/pkg/tss"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/eventlog"
+	"github.com/mvdan/u-root-coreutils/pkg/tss"
 )
 
 var (

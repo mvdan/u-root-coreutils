@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/uefivars/vartest"
+	"github.com/mvdan/u-root-coreutils/pkg/uefivars/vartest"
 )
 
 // main is needed to extract the testdata from a zip to temp dir, and to clean

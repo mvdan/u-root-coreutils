@@ -13,7 +13,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/upath"
+	"github.com/mvdan/u-root-coreutils/pkg/upath"
 )
 
 // ToZip packs the all files at dir to a zip archive at dest.

@@ -18,7 +18,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/u-root/u-root/pkg/dhclient"
+	"github.com/mvdan/u-root-coreutils/pkg/dhclient"
 	"github.com/vishvananda/netlink"
 )
 

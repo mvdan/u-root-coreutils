@@ -17,9 +17,9 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/u-root/u-root/pkg/finddrive"
-	"github.com/u-root/u-root/pkg/hsskey"
-	"github.com/u-root/u-root/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/finddrive"
+	"github.com/mvdan/u-root-coreutils/pkg/hsskey"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
 )
 
 const (

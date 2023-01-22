@@ -15,7 +15,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/cmds/core/man/data"
+	"github.com/mvdan/u-root-coreutils/cmds/core/man/data"
 )
 
 //go:generate go run gen/gen.go ../../../cmds data/data.go

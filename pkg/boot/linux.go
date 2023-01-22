@@ -12,11 +12,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/boot/kexec"
-	"github.com/u-root/u-root/pkg/boot/linux"
-	"github.com/u-root/u-root/pkg/boot/util"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/linux"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/util"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 	"golang.org/x/sys/unix"
 )
 

@@ -18,12 +18,12 @@ import (
 
 	"github.com/u-root/gobusybox/src/pkg/bb/findpkg"
 	gbbgolang "github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/ldd"
-	"github.com/u-root/u-root/pkg/uflag"
-	"github.com/u-root/u-root/pkg/ulog"
-	"github.com/u-root/u-root/pkg/uroot/builder"
-	"github.com/u-root/u-root/pkg/uroot/initramfs"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/ldd"
+	"github.com/mvdan/u-root-coreutils/pkg/uflag"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/builder"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs"
 )
 
 // These constants are used in DefaultRamfs.
@@ -86,9 +86,9 @@ type Commands struct {
 	//
 	// Currently allowed formats:
 	//
-	//   - package imports; e.g. github.com/u-root/u-root/cmds/ls
-	//   - globs of package imports; e.g. github.com/u-root/u-root/cmds/*
-	//   - paths to package directories; e.g. $GOPATH/src/github.com/u-root/u-root/cmds/ls
+	//   - package imports; e.g. github.com/mvdan/u-root-coreutils/cmds/ls
+	//   - globs of package imports; e.g. github.com/mvdan/u-root-coreutils/cmds/*
+	//   - paths to package directories; e.g. $GOPATH/src/github.com/mvdan/u-root-coreutils/cmds/ls
 	//   - globs of paths to package directories; e.g. ./cmds/*
 	//
 	// Directories may be relative or absolute, with or without globs.
@@ -131,15 +131,15 @@ type Opts struct {
 	//     Commands{
 	//       Builder: builder.BusyBox,
 	//       Packages: []string{
-	//         "github.com/u-root/u-root/cmds/ls",
-	//         "github.com/u-root/u-root/cmds/ip",
+	//         "github.com/mvdan/u-root-coreutils/cmds/ls",
+	//         "github.com/mvdan/u-root-coreutils/cmds/ip",
 	//       },
 	//     },
 	//     Commands{
 	//       Builder: builder.Binary,
 	//       Packages: []string{
-	//         "github.com/u-root/u-root/cmds/cd",
-	//         "github.com/u-root/u-root/cmds/cat",
+	//         "github.com/mvdan/u-root-coreutils/cmds/cd",
+	//         "github.com/mvdan/u-root-coreutils/cmds/cat",
 	//       },
 	//     },
 	//   }
@@ -300,7 +300,7 @@ func CreateInitramfs(logger ulog.Logger, opts Opts) error {
 		}
 	}
 	if err := opts.addSymlinkTo(logger, archive, opts.InitCmd, "init"); err != nil {
-		return fmt.Errorf("%v: specify -initcmd=\"\" to ignore this error and build without an init (or, did you specify a list, and are you missing github.com/u-root/u-root/cmds/core/init?)", err)
+		return fmt.Errorf("%v: specify -initcmd=\"\" to ignore this error and build without an init (or, did you specify a list, and are you missing github.com/mvdan/u-root-coreutils/cmds/core/init?)", err)
 	}
 	if err := opts.addSymlinkTo(logger, archive, opts.DefaultShell, "bin/sh"); err != nil {
 		return fmt.Errorf("%v: specify -defaultsh=\"\" to ignore this error and build without a shell", err)

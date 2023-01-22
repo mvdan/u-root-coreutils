@@ -16,15 +16,15 @@ import (
 	"testing"
 
 	gbbgolang "github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/uio"
-	itest "github.com/u-root/u-root/pkg/uroot/initramfs/test"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	itest "github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs/test"
 )
 
 var twocmds = []string{
-	"github.com/u-root/u-root/cmds/core/ls",
-	"github.com/u-root/u-root/cmds/core/init",
+	"github.com/mvdan/u-root-coreutils/cmds/core/ls",
+	"github.com/mvdan/u-root-coreutils/cmds/core/init",
 }
 
 func xTestDCE(t *testing.T) {
@@ -34,9 +34,9 @@ func xTestDCE(t *testing.T) {
 		[]string{
 			"-build=bb", "-no-strip",
 			"world",
-			"-github.com/u-root/u-root/cmds/exp/builtin",
-			"-github.com/u-root/u-root/cmds/exp/run",
-			"github.com/u-root/u-root/pkg/uroot/test/foo",
+			"-github.com/mvdan/u-root-coreutils/cmds/exp/builtin",
+			"-github.com/mvdan/u-root-coreutils/cmds/exp/run",
+			"github.com/mvdan/u-root-coreutils/pkg/uroot/test/foo",
 		},
 		nil,
 		nil)
@@ -107,11 +107,11 @@ func (v noDeadCode) Validate(a *cpio.Archive) error {
 		syms[sym] = true
 	}
 	// 3. Check for presence and absence of particular symbols.
-	if !syms["github.com/u-root/u-root/pkg/uroot/test/bar.Bar.UsedInterfaceMethod"] {
+	if !syms["github.com/mvdan/u-root-coreutils/pkg/uroot/test/bar.Bar.UsedInterfaceMethod"] {
 		// Sanity check of the test itself: this method must be in the binary.
 		return fmt.Errorf("expected symbol not found, something is wrong with the build")
 	}
-	if syms["github.com/u-root/u-root/pkg/uroot/test/bar.Bar.UnusedNonInterfaceMethod"] {
+	if syms["github.com/mvdan/u-root-coreutils/pkg/uroot/test/bar.Bar.UnusedNonInterfaceMethod"] {
 		// Sanity check of the test itself: this method must be in the binary.
 		delFiles = false
 		return fmt.Errorf(
@@ -199,7 +199,7 @@ func TestUrootCmdline(t *testing.T) {
 	bareTests := []testCase{
 		{
 			name: "uinitcmd",
-			args: []string{"-uinitcmd=echo foobar fuzz", "-defaultsh=", "github.com/u-root/u-root/cmds/core/init", "github.com/u-root/u-root/cmds/core/echo"},
+			args: []string{"-uinitcmd=echo foobar fuzz", "-defaultsh=", "github.com/mvdan/u-root-coreutils/cmds/core/init", "github.com/u-root/u-root/cmds/core/echo"},
 			err:  nil,
 			validators: []itest.ArchiveValidator{
 				itest.HasRecord{cpio.Symlink("bin/uinit", "../bbin/echo")},
@@ -214,10 +214,10 @@ func TestUrootCmdline(t *testing.T) {
 			args: []string{
 				// Build the world + test symbols, unstripped.
 				// Change default shell to gosh for this test as elvish uses the reflect package
-				"-defaultsh=/bbin/gosh", "-no-strip", "world", "github.com/u-root/u-root/pkg/uroot/test/foo",
+				"-defaultsh=/bbin/gosh", "-no-strip", "world", "github.com/mvdan/u-root-coreutils/pkg/uroot/test/foo",
 				// These are known to disable DCE and need to be exluded.
 				// elvish uses reflect.Value.Call and is expected to not use DCE.
-				"-github.com/u-root/u-root/cmds/core/elvish",
+				"-github.com/mvdan/u-root-coreutils/cmds/core/elvish",
 			},
 			err: nil,
 			validators: []itest.ArchiveValidator{

@@ -10,7 +10,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/u-root/u-root/pkg/checker"
+	"github.com/mvdan/u-root-coreutils/pkg/checker"
 )
 
 // fixmynetboot is a troubleshooting tool that can help you identify issues that

@@ -12,9 +12,9 @@ import (
 	"os"
 	"strings"
 
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	tss "github.com/u-root/u-root/pkg/tss"
-	txtlog "github.com/u-root/u-root/pkg/txtlog"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	tss "github.com/mvdan/u-root-coreutils/pkg/tss"
+	txtlog "github.com/mvdan/u-root-coreutils/pkg/txtlog"
 )
 
 // EventLog stores location for dumping event logs on disk.

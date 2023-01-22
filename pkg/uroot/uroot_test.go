@@ -11,10 +11,10 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/ulog/ulogtest"
-	"github.com/u-root/u-root/pkg/uroot/builder"
-	itest "github.com/u-root/u-root/pkg/uroot/initramfs/test"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog/ulogtest"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/builder"
+	itest "github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs/test"
 )
 
 type inMemArchive struct {
@@ -59,8 +59,8 @@ func TestCreateInitramfs(t *testing.T) {
 					{
 						Builder: builder.BusyBox,
 						Packages: []string{
-							"github.com/u-root/u-root/cmds/core/init",
-							"github.com/u-root/u-root/cmds/core/ls",
+							"github.com/mvdan/u-root-coreutils/cmds/core/init",
+							"github.com/mvdan/u-root-coreutils/cmds/core/ls",
 						},
 					},
 				},
@@ -106,12 +106,12 @@ func TestCreateInitramfs(t *testing.T) {
 					{
 						Builder: builder.Binary,
 						Packages: []string{
-							"github.com/u-root/u-root/cmds/core/ls",
+							"github.com/mvdan/u-root-coreutils/cmds/core/ls",
 						},
 					},
 				},
 			},
-			want: "could not create symlink from \"init\" to \"foobar\": command or path \"foobar\" not included in u-root build: specify -initcmd=\"\" to ignore this error and build without an init (or, did you specify a list, and are you missing github.com/u-root/u-root/cmds/core/init?)",
+			want: "could not create symlink from \"init\" to \"foobar\": command or path \"foobar\" not included in u-root build: specify -initcmd=\"\" to ignore this error and build without an init (or, did you specify a list, and are you missing github.com/mvdan/u-root-coreutils/cmds/core/init?)",
 			validators: []itest.ArchiveValidator{
 				itest.IsEmpty{},
 			},
@@ -140,15 +140,15 @@ func TestCreateInitramfs(t *testing.T) {
 					{
 						Builder: builder.BusyBox,
 						Packages: []string{
-							"github.com/u-root/u-root/cmds/core/init",
-							"github.com/u-root/u-root/cmds/core/ls",
+							"github.com/mvdan/u-root-coreutils/cmds/core/init",
+							"github.com/mvdan/u-root-coreutils/cmds/core/ls",
 						},
 					},
 					{
 						Builder: builder.Binary,
 						Packages: []string{
-							"github.com/u-root/u-root/cmds/core/cp",
-							"github.com/u-root/u-root/cmds/core/dd",
+							"github.com/mvdan/u-root-coreutils/cmds/core/cp",
+							"github.com/mvdan/u-root-coreutils/cmds/core/dd",
 						},
 					},
 				},

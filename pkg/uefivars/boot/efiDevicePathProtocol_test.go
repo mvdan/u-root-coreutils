@@ -10,7 +10,7 @@ package boot
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/uefivars"
+	"github.com/mvdan/u-root-coreutils/pkg/uefivars"
 )
 
 var boot7 = []byte{

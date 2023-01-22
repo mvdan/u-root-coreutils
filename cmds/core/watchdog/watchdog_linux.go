@@ -27,7 +27,7 @@ import (
 	"time"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/watchdog"
+	"github.com/mvdan/u-root-coreutils/pkg/watchdog"
 )
 
 var dev = flag.String("dev", "/dev/watchdog", "device")

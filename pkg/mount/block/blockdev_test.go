@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/pci"
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/pci"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 func TestDebug(t *testing.T) {

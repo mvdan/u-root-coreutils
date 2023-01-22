@@ -13,16 +13,16 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegrationPox(t *testing.T) {
 	o := &vmtest.Options{
 		QEMUOpts: qemu.Options{},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/cmds/exp/pox"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/cmds/exp/pox"}, o)
 }
 
 func TestPox(t *testing.T) {

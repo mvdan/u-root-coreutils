@@ -9,8 +9,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/boot/ibft"
-	"github.com/u-root/u-root/pkg/boot/multiboot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/ibft"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot"
 )
 
 // MultibootImage is a multiboot-formated OSImage, such as ESXi, Xen, Akaros,

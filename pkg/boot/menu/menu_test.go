@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/creack/pty"
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 var inputDelay = 500 * time.Millisecond

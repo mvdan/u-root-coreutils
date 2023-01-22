@@ -47,8 +47,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/syscallfilter"
-	"github.com/u-root/u-root/pkg/uroot/util"
+	"github.com/mvdan/u-root-coreutils/pkg/syscallfilter"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/util"
 )
 
 var logactions = flag.Bool("l", false, "Log actions output from the filter")

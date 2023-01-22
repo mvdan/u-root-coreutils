@@ -20,8 +20,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/ipmi"
-	"github.com/u-root/u-root/pkg/ipmi/blobs"
+	"github.com/mvdan/u-root-coreutils/pkg/ipmi"
+	"github.com/mvdan/u-root-coreutils/pkg/ipmi/blobs"
 )
 
 const (

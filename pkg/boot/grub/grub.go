@@ -26,15 +26,15 @@ import (
 	"strings"
 
 	"github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/bls"
-	"github.com/u-root/u-root/pkg/boot/multiboot"
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
-	"github.com/u-root/u-root/pkg/shlex"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/bls"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/shlex"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 )
 
 var probeGrubFiles = []string{

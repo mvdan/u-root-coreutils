@@ -11,10 +11,10 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegrationIPMI(t *testing.T) {
@@ -31,7 +31,7 @@ func TestIntegrationIPMI(t *testing.T) {
 			},
 		},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/ipmi"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/ipmi"}, o)
 }
 
 func TestWatchdogRunningQemu(t *testing.T) {

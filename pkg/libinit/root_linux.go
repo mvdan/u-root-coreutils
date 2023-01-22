@@ -16,10 +16,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/cmdline"
-	"github.com/u-root/u-root/pkg/cp"
-	"github.com/u-root/u-root/pkg/kmodule"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/cp"
+	"github.com/mvdan/u-root-coreutils/pkg/kmodule"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 	"golang.org/x/sys/unix"
 )
 

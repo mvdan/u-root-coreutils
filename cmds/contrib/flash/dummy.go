@@ -7,8 +7,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/flash"
-	"github.com/u-root/u-root/pkg/flash/spimock"
+	"github.com/mvdan/u-root-coreutils/pkg/flash"
+	"github.com/mvdan/u-root-coreutils/pkg/flash/spimock"
 )
 
 type dummyProgrammer struct {

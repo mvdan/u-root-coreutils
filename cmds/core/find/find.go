@@ -22,7 +22,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/find"
+	"github.com/mvdan/u-root-coreutils/pkg/find"
 )
 
 const cmd = "find [opts] starting-at-path"

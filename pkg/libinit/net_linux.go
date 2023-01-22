@@ -7,7 +7,7 @@ package libinit
 import (
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 	"github.com/vishvananda/netlink"
 )
 

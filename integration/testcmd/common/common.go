@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/tarutil"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/tarutil"
 	"golang.org/x/sys/unix"
 )
 

@@ -19,7 +19,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 var logPrefixLength = len("2009/11/10 23:00:00 ")

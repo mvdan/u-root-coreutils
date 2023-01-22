@@ -37,7 +37,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 type (

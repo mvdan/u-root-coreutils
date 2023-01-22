@@ -18,11 +18,11 @@ import (
 	"time"
 
 	gbbgolang "github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/shlex"
-	"github.com/u-root/u-root/pkg/ulog"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/uroot/builder"
-	"github.com/u-root/u-root/pkg/uroot/initramfs"
+	"github.com/mvdan/u-root-coreutils/pkg/shlex"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/builder"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs"
 )
 
 // multiFlag is used for flags that support multiple invocations, e.g. -files
@@ -303,9 +303,9 @@ func Main(l ulog.Logger, env gbbgolang.Environ, buildOpts *gbbgolang.BuildOpts) 
 		// Resolve globs into package imports.
 		//
 		// Currently allowed format:
-		//   Paths to Go package directories; e.g. $GOPATH/src/github.com/u-root/u-root/cmds/*
+		//   Paths to Go package directories; e.g. $GOPATH/src/github.com/mvdan/u-root-coreutils/cmds/*
 		//   u-root templates; e.g. all, core, minimal (requires uroot-source be valid)
-		//   Import paths of u-root commands; e.g. github.com/u-root/u-root/cmds/* (requires uroot-source)
+		//   Import paths of u-root commands; e.g. github.com/mvdan/u-root-coreutils/cmds/* (requires uroot-source)
 		var pkgs []string
 		for _, a := range flag.Args() {
 			p, ok := templates[a]
@@ -320,7 +320,7 @@ func Main(l ulog.Logger, env gbbgolang.Environ, buildOpts *gbbgolang.BuildOpts) 
 			pkgs = append(pkgs, p...)
 		}
 		if len(pkgs) == 0 {
-			pkgs = []string{"github.com/u-root/u-root/cmds/core/*"}
+			pkgs = []string{"github.com/mvdan/u-root-coreutils/cmds/core/*"}
 		}
 
 		// The command-line tool only allows specifying one build mode
@@ -377,7 +377,7 @@ func validateArg(arg string) bool {
 }
 
 func checkPrefix(arg string) bool {
-	prefixes := []string{".", "/", "-", "cmds", "github.com/u-root/u-root"}
+	prefixes := []string{".", "/", "-", "cmds", "github.com/mvdan/u-root-coreutils"}
 	for _, prefix := range prefixes {
 		if strings.HasPrefix(arg, prefix) {
 			return true

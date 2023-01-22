@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/u-root/u-root/pkg/crypto"
-	"github.com/u-root/u-root/pkg/vpd"
+	"github.com/mvdan/u-root-coreutils/pkg/crypto"
+	"github.com/mvdan/u-root-coreutils/pkg/vpd"
 )
 
 // Get, Set and GetAll are defined here as variables so they can be overridden

@@ -17,11 +17,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/boottest"
-	"github.com/u-root/u-root/pkg/boot/linux"
-	"github.com/u-root/u-root/pkg/boot/multiboot"
-	"github.com/u-root/u-root/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/boottest"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/linux"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/multiboot"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
 )
 
 func mustParseURL(s string) *url.URL {

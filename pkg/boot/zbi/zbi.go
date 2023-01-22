@@ -11,7 +11,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/u-root/u-root/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
 )
 
 const (

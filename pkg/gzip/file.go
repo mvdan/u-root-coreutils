@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // File is a file path to be compressed or decompressed.

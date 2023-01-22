@@ -11,9 +11,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/mount"
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/tpm"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/tpm"
 )
 
 // Describes the "files" portion of policy file.

@@ -18,7 +18,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/boot/zimage"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/zimage"
 )
 
 func main() {

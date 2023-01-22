@@ -9,14 +9,14 @@ import (
 	"context"
 	"sort"
 
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/bls"
-	"github.com/u-root/u-root/pkg/boot/esxi"
-	"github.com/u-root/u-root/pkg/boot/grub"
-	"github.com/u-root/u-root/pkg/boot/syslinux"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/mount/block"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/bls"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/esxi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/grub"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/syslinux"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount/block"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 )
 
 // Sort the image in descending order by rank

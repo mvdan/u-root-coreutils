@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/ls"
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 	"golang.org/x/sys/unix"
 )
 

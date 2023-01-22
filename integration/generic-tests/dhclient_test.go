@@ -17,9 +17,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // TestDhclientQEMU4 uses QEMU's DHCP server to test dhclient.

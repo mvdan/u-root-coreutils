@@ -8,7 +8,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 var defaultRSDP = []byte("RSDP PTR U-ROOT\x02")

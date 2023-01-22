@@ -16,9 +16,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/u-root/u-root/pkg/ls"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/upath"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/upath"
 	"golang.org/x/sys/unix"
 )
 

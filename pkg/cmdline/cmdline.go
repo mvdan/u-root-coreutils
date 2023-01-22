@@ -15,7 +15,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/u-root/u-root/pkg/shlex"
+	"github.com/mvdan/u-root-coreutils/pkg/shlex"
 )
 
 // CmdLine lets people view the raw & parsed /proc/cmdline in one place

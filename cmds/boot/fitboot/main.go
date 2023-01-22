@@ -10,10 +10,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/acpi"
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/fit"
-	"github.com/u-root/u-root/pkg/vfile"
+	"github.com/mvdan/u-root-coreutils/pkg/acpi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/fit"
+	"github.com/mvdan/u-root-coreutils/pkg/vfile"
 )
 
 var (

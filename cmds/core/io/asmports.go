@@ -8,7 +8,7 @@
 package main
 
 import (
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 // The xin* and xout* commands use iopl, and hence

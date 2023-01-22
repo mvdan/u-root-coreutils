@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // DebugPrefix is a prefix that some messages are printed with for tests to parse.

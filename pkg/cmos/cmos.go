@@ -8,7 +8,7 @@
 package cmos
 
 import (
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 const (

@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // TestIO tests the string "UART TEST" is written to the serial port on 0x3f8.

@@ -30,7 +30,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/u-root/u-root/pkg/ntpdate"
+	"github.com/mvdan/u-root-coreutils/pkg/ntpdate"
 )
 
 var (

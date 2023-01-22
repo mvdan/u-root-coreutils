@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 // GrepTest is a table-driven which spawns grep with a variety of options and inputs.

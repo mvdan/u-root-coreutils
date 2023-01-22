@@ -14,9 +14,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 func newMock(errStr string, inBuf, outBuf io.ReadWriter, f *os.File) *Chip {

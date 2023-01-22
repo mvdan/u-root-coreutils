@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
 	"golang.org/x/sys/unix"
 )
 

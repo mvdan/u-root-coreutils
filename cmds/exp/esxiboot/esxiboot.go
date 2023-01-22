@@ -35,9 +35,9 @@ import (
 	"strings"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/boot"
-	"github.com/u-root/u-root/pkg/boot/esxi"
-	"github.com/u-root/u-root/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/esxi"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
 )
 
 var (

@@ -12,9 +12,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/align"
-	"github.com/u-root/u-root/pkg/ubinary"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/ubinary"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // A module represents a module to be loaded along with the kernel.

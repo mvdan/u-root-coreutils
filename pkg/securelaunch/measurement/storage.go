@@ -11,8 +11,8 @@ import (
 	"os"
 	"path/filepath"
 
-	slaunch "github.com/u-root/u-root/pkg/securelaunch"
-	"github.com/u-root/u-root/pkg/securelaunch/tpm"
+	slaunch "github.com/mvdan/u-root-coreutils/pkg/securelaunch"
+	"github.com/mvdan/u-root-coreutils/pkg/securelaunch/tpm"
 )
 
 // StorageCollector describes the "storage" portion of the policy file.

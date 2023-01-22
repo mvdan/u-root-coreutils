@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 var memioRead = memio.Read

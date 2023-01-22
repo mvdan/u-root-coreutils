@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
 )
 
 var final = flag.BoolP("print-last", "p", false, "Print only the final path element of each file name")

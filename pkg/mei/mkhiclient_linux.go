@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/u-root/u-root/pkg/pci"
+	"github.com/mvdan/u-root-coreutils/pkg/pci"
 )
 
 // Intel MEI PCI dev IDs,

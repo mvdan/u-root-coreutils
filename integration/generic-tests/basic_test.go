@@ -10,7 +10,7 @@ package integration
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestScript(t *testing.T) {

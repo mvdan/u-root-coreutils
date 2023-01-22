@@ -12,9 +12,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/cp"
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/cp"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegration(t *testing.T) {
@@ -50,5 +50,5 @@ func TestIntegration(t *testing.T) {
 			},
 		},
 	}
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/mount"}, o)
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/mount"}, o)
 }

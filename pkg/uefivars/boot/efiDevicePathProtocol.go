@@ -13,7 +13,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/uefivars"
+	"github.com/mvdan/u-root-coreutils/pkg/uefivars"
 )
 
 var (

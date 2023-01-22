@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/u-root/u-root/pkg/boot/ebda"
-	"github.com/u-root/u-root/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/ebda"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
 )
 
 // " RSD PTR" in hex, 8 bytes.

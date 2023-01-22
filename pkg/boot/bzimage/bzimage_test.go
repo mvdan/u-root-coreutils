@@ -11,7 +11,7 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/u-root/u-root/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
 )
 
 type testImage struct {

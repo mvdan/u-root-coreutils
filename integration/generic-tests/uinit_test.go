@@ -10,13 +10,13 @@ package integration
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // TestHelloWorld runs an init which prints the string "HELLO WORLD" and exits.
 func TestHelloWorld(t *testing.T) {
 	q, cleanup := vmtest.QEMUTest(t, &vmtest.Options{
-		Uinit: "github.com/u-root/u-root/integration/testcmd/helloworld/uinit",
+		Uinit: "github.com/mvdan/u-root-coreutils/integration/testcmd/helloworld/uinit",
 	})
 	defer cleanup()
 
@@ -28,7 +28,7 @@ func TestHelloWorld(t *testing.T) {
 // TestHelloWorldNegative runs an init which does not print the string "HELLO WORLD".
 func TestHelloWorldNegative(t *testing.T) {
 	q, cleanup := vmtest.QEMUTest(t, &vmtest.Options{
-		Uinit: "github.com/u-root/u-root/integration/testcmd/helloworld/uinit",
+		Uinit: "github.com/mvdan/u-root-coreutils/integration/testcmd/helloworld/uinit",
 	})
 	defer cleanup()
 

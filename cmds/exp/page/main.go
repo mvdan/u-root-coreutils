@@ -22,7 +22,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/termios"
+	"github.com/mvdan/u-root-coreutils/pkg/termios"
 )
 
 func page(t *termios.TTYIO, r io.Reader, w io.Writer) error {

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/strace"
+	"github.com/mvdan/u-root-coreutils/pkg/strace"
 )
 
 // If we are being traced, none of this will work.

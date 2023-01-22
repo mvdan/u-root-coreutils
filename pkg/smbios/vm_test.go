@@ -10,13 +10,13 @@ package smbios
 import (
 	"testing"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 func TestIntegration(t *testing.T) {
-	vmtest.GolangTest(t, []string{"github.com/u-root/u-root/pkg/smbios"}, &vmtest.Options{
+	vmtest.GolangTest(t, []string{"github.com/mvdan/u-root-coreutils/pkg/smbios"}, &vmtest.Options{
 		QEMUOpts: qemu.Options{
 			Devices: []qemu.Device{
 				qemu.ArbitraryArgs{"-smbios", "type=2,manufacturer=u-root"},

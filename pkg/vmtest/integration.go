@@ -15,14 +15,14 @@ import (
 	"testing"
 
 	gbbgolang "github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/cp"
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/ulog"
-	"github.com/u-root/u-root/pkg/ulog/ulogtest"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/uroot/initramfs"
+	"github.com/mvdan/u-root-coreutils/pkg/cp"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog/ulogtest"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/initramfs"
 )
 
 // Options are integration test options.
@@ -316,7 +316,7 @@ func ChooseTestInitramfs(o uroot.Opts, uinit, outputFile string) error {
 
 	if len(uinit) == 0 {
 		log.Printf("Defaulting to generic initramfs")
-		uinit = "github.com/u-root/u-root/integration/testcmd/generic/uinit"
+		uinit = "github.com/mvdan/u-root-coreutils/integration/testcmd/generic/uinit"
 	}
 
 	_, err := CreateTestInitramfs(o, uinit, outputFile)
@@ -351,8 +351,8 @@ func CreateTestInitramfs(o uroot.Opts, uinit, outputFile string) (string, error)
 	var cmds []string
 	if len(o.Commands) == 0 {
 		cmds = []string{
-			"github.com/u-root/u-root/cmds/core/*",
-			"github.com/u-root/u-root/cmds/exp/*",
+			"github.com/mvdan/u-root-coreutils/cmds/core/*",
+			"github.com/mvdan/u-root-coreutils/cmds/exp/*",
 		}
 	}
 

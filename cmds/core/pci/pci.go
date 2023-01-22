@@ -28,7 +28,7 @@ import (
 	"strings"
 
 	flag "github.com/pborman/getopt/v2"
-	"github.com/u-root/u-root/pkg/pci"
+	"github.com/mvdan/u-root-coreutils/pkg/pci"
 )
 
 var (

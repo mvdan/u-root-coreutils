@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/acpi"
-	"github.com/u-root/u-root/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/acpi"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
 )
 
 type kexecLoadFunc func(entry uintptr, segments kexec.Segments, flags uint64) error

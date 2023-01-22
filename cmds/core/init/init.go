@@ -16,7 +16,7 @@ import (
 	"log"
 	"os/exec"
 
-	"github.com/u-root/u-root/pkg/libinit"
+	"github.com/mvdan/u-root-coreutils/pkg/libinit"
 )
 
 // initCmds has all the bits needed to continue

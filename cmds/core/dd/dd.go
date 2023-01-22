@@ -48,7 +48,7 @@ import (
 	"sync/atomic"
 
 	"github.com/rck/unit"
-	"github.com/u-root/u-root/pkg/progress"
+	"github.com/mvdan/u-root-coreutils/pkg/progress"
 )
 
 var (

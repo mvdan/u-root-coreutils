@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/u-root/u-root/pkg/dt"
+	"github.com/mvdan/u-root-coreutils/pkg/dt"
 )
 
 func checkMemoryMap(t *testing.T, got, want MemoryMap) {

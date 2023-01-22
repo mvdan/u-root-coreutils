@@ -13,7 +13,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/upath"
+	"github.com/mvdan/u-root-coreutils/pkg/upath"
 )
 
 // Opts contains options for creating and extracting tar files.

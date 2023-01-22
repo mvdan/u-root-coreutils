@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/u-root/u-root/pkg/gzip"
+	"github.com/mvdan/u-root-coreutils/pkg/gzip"
 )
 
 var cmdLine = flag.CommandLine

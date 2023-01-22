@@ -14,7 +14,7 @@ import (
 
 	"github.com/beevik/ntp"
 
-	"github.com/u-root/u-root/pkg/rtc"
+	"github.com/mvdan/u-root-coreutils/pkg/rtc"
 )
 
 const DefaultNTPConfig = "/etc/ntp.conf"

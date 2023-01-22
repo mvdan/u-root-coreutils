@@ -19,7 +19,7 @@ import (
 	"os"
 	fp "path/filepath"
 
-	"github.com/u-root/u-root/pkg/uefivars/boot"
+	"github.com/mvdan/u-root-coreutils/pkg/uefivars/boot"
 )
 
 // must run as root, as efi vars are not accessible otherwise

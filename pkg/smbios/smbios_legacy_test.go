@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/memio"
-	"github.com/u-root/u-root/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/memio"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
 )
 
 var tmpBuf = []byte{0, 0, 0, 0, 0, 0}

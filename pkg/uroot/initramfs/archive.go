@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/ulog"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog"
 )
 
 var (

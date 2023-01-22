@@ -15,7 +15,7 @@ import (
 	"os"
 	"unicode/utf16"
 
-	tss "github.com/u-root/u-root/pkg/tss"
+	tss "github.com/mvdan/u-root-coreutils/pkg/tss"
 )
 
 /*

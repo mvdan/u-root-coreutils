@@ -29,7 +29,7 @@ import (
 	"log"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/acpi"
+	"github.com/mvdan/u-root-coreutils/pkg/acpi"
 )
 
 var cmdUsage = "Usage: rsdp"

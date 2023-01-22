@@ -14,9 +14,9 @@ import (
 	flag "github.com/spf13/pflag"
 	"golang.org/x/sys/unix"
 
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/pty"
-	"github.com/u-root/u-root/pkg/termios"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/pty"
+	"github.com/mvdan/u-root-coreutils/pkg/termios"
 )
 
 const (

@@ -17,7 +17,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/u-root/u-root/pkg/termios"
+	"github.com/mvdan/u-root-coreutils/pkg/termios"
 )
 
 // Pty contains all the bits and pieces needed to start and control

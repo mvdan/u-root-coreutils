@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/u-root/u-root/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
 )
 
 // Object is an object file, specific to kexec uses.

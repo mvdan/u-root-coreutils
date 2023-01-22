@@ -27,7 +27,7 @@ import (
 
 	"github.com/insomniacslk/dhcp/dhcpv4"
 	"github.com/insomniacslk/dhcp/dhcpv6"
-	"github.com/u-root/u-root/pkg/dhclient"
+	"github.com/mvdan/u-root-coreutils/pkg/dhclient"
 	"github.com/vishvananda/netlink"
 )
 

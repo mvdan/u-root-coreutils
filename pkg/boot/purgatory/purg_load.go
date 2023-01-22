@@ -33,8 +33,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/u-root/u-root/pkg/align"
-	"github.com/u-root/u-root/pkg/boot/kexec"
+	"github.com/mvdan/u-root-coreutils/pkg/align"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/kexec"
 )
 
 const defaultPurgatory = "default"

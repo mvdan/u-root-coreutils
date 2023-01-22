@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/vpd"
+	"github.com/mvdan/u-root-coreutils/pkg/vpd"
 )
 
 var getter *Getter

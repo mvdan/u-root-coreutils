@@ -18,7 +18,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/kmodule"
+	"github.com/mvdan/u-root-coreutils/pkg/kmodule"
 )
 
 func main() {

@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/testutil"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/testutil"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // TestPxeboot runs a server and client to test pxebooting a node.
@@ -53,12 +53,12 @@ func TestPxeboot4(t *testing.T) {
 		Name: "TestPxeboot_Client",
 		BuildOpts: uroot.Opts{
 			Commands: uroot.BusyBoxCmds(
-				"github.com/u-root/u-root/cmds/core/init",
-				"github.com/u-root/u-root/cmds/core/elvish",
-				"github.com/u-root/u-root/cmds/core/ip",
-				"github.com/u-root/u-root/cmds/core/shutdown",
-				"github.com/u-root/u-root/cmds/core/sleep",
-				"github.com/u-root/u-root/cmds/boot/pxeboot",
+				"github.com/mvdan/u-root-coreutils/cmds/core/init",
+				"github.com/mvdan/u-root-coreutils/cmds/core/elvish",
+				"github.com/mvdan/u-root-coreutils/cmds/core/ip",
+				"github.com/mvdan/u-root-coreutils/cmds/core/shutdown",
+				"github.com/mvdan/u-root-coreutils/cmds/core/sleep",
+				"github.com/mvdan/u-root-coreutils/cmds/boot/pxeboot",
 			),
 		},
 		TestCmds: []string{

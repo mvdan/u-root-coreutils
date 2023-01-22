@@ -15,7 +15,7 @@ import (
 	"strings"
 
 	guid "github.com/google/uuid"
-	"github.com/u-root/u-root/pkg/efivarfs"
+	"github.com/mvdan/u-root-coreutils/pkg/efivarfs"
 )
 
 var (

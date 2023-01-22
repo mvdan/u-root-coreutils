@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"github.com/u-root/u-root/pkg/ls"
+	"github.com/mvdan/u-root-coreutils/pkg/ls"
 )
 
 // File is a found file.

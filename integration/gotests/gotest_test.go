@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/u-root/u-root/pkg/qemu"
-	"github.com/u-root/u-root/pkg/uroot"
-	"github.com/u-root/u-root/pkg/vmtest"
+	"github.com/mvdan/u-root-coreutils/pkg/qemu"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot"
+	"github.com/mvdan/u-root-coreutils/pkg/vmtest"
 )
 
 // testPkgs returns a slice of tests to run.
@@ -24,10 +24,10 @@ func testPkgs(t *testing.T) []string {
 	// Packages which do not contain tests (or do not contain tests for the
 	// build target) will still compile a test binary which vacuously pass.
 	cmd := exec.Command("go", "list",
-		"github.com/u-root/u-root/cmds/boot/...",
-		"github.com/u-root/u-root/cmds/core/...",
-		"github.com/u-root/u-root/cmds/exp/...",
-		"github.com/u-root/u-root/pkg/...",
+		"github.com/mvdan/u-root-coreutils/cmds/boot/...",
+		"github.com/mvdan/u-root-coreutils/cmds/core/...",
+		"github.com/mvdan/u-root-coreutils/cmds/exp/...",
+		"github.com/mvdan/u-root-coreutils/pkg/...",
 	)
 	cmd.Env = append(os.Environ(), "GOARCH="+vmtest.TestArch())
 	out, err := cmd.CombinedOutput()
@@ -41,50 +41,50 @@ func testPkgs(t *testing.T) []string {
 	// 1. either it requires networking (not enabled in the kernel)
 	// 2. or it depends on some test files (for example /bin/sleep)
 	blocklist := []string{
-		"github.com/u-root/u-root/cmds/core/cmp",
-		"github.com/u-root/u-root/cmds/core/dd",
-		"github.com/u-root/u-root/cmds/core/fusermount",
-		"github.com/u-root/u-root/cmds/core/gosh",
-		"github.com/u-root/u-root/cmds/core/wget",
-		"github.com/u-root/u-root/cmds/core/which",
+		"github.com/mvdan/u-root-coreutils/cmds/core/cmp",
+		"github.com/mvdan/u-root-coreutils/cmds/core/dd",
+		"github.com/mvdan/u-root-coreutils/cmds/core/fusermount",
+		"github.com/mvdan/u-root-coreutils/cmds/core/gosh",
+		"github.com/mvdan/u-root-coreutils/cmds/core/wget",
+		"github.com/mvdan/u-root-coreutils/cmds/core/which",
 		// Some of TestEdCommands do not exit properly and end up left running. No idea how to fix this yet.
-		"github.com/u-root/u-root/cmds/exp/ed",
-		"github.com/u-root/u-root/cmds/exp/pox",
-		"github.com/u-root/u-root/pkg/crypto",
-		"github.com/u-root/u-root/pkg/tarutil",
-		"github.com/u-root/u-root/pkg/ldd",
+		"github.com/mvdan/u-root-coreutils/cmds/exp/ed",
+		"github.com/mvdan/u-root-coreutils/cmds/exp/pox",
+		"github.com/mvdan/u-root-coreutils/pkg/crypto",
+		"github.com/mvdan/u-root-coreutils/pkg/tarutil",
+		"github.com/mvdan/u-root-coreutils/pkg/ldd",
 
 		// These have special configuration.
-		"github.com/u-root/u-root/pkg/gpio",
-		"github.com/u-root/u-root/pkg/mount",
-		"github.com/u-root/u-root/pkg/mount/block",
-		"github.com/u-root/u-root/pkg/mount/loop",
-		"github.com/u-root/u-root/pkg/ipmi",
-		"github.com/u-root/u-root/pkg/smbios",
+		"github.com/mvdan/u-root-coreutils/pkg/gpio",
+		"github.com/mvdan/u-root-coreutils/pkg/mount",
+		"github.com/mvdan/u-root-coreutils/pkg/mount/block",
+		"github.com/mvdan/u-root-coreutils/pkg/mount/loop",
+		"github.com/mvdan/u-root-coreutils/pkg/ipmi",
+		"github.com/mvdan/u-root-coreutils/pkg/smbios",
 
 		// Missing xzcat in VM.
-		"github.com/u-root/u-root/cmds/exp/bzimage",
-		"github.com/u-root/u-root/pkg/boot/bzimage",
+		"github.com/mvdan/u-root-coreutils/cmds/exp/bzimage",
+		"github.com/mvdan/u-root-coreutils/pkg/boot/bzimage",
 
 		// No Go compiler in VM.
-		"github.com/u-root/u-root/pkg/uroot",
-		"github.com/u-root/u-root/pkg/uroot/builder",
+		"github.com/mvdan/u-root-coreutils/pkg/uroot",
+		"github.com/mvdan/u-root-coreutils/pkg/uroot/builder",
 
 		// ??
-		"github.com/u-root/u-root/pkg/tss",
-		"github.com/u-root/u-root/pkg/syscallfilter",
+		"github.com/mvdan/u-root-coreutils/pkg/tss",
+		"github.com/mvdan/u-root-coreutils/pkg/syscallfilter",
 	}
 	if vmtest.TestArch() == "arm64" {
 		blocklist = append(
 			blocklist,
-			"github.com/u-root/u-root/pkg/strace",
+			"github.com/mvdan/u-root-coreutils/pkg/strace",
 
 			// These tests run in 1-2 seconds on x86, but run
 			// beyond their huge timeout under arm64 in the VM. Not
 			// sure why. Slow emulation?
-			"github.com/u-root/u-root/cmds/core/pci",
-			"github.com/u-root/u-root/cmds/exp/cbmem",
-			"github.com/u-root/u-root/pkg/vfile",
+			"github.com/mvdan/u-root-coreutils/cmds/core/pci",
+			"github.com/mvdan/u-root-coreutils/cmds/exp/cbmem",
+			"github.com/mvdan/u-root-coreutils/pkg/vfile",
 		)
 	}
 	for i := 0; i < len(pkgs); i++ {

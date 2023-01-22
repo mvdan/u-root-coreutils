@@ -18,7 +18,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/uroot/util"
+	"github.com/mvdan/u-root-coreutils/pkg/uroot/util"
 )
 
 var (

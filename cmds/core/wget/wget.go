@@ -34,8 +34,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 var outPath = flag.String("O", "", "output file")

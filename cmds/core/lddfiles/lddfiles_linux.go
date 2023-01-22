@@ -24,7 +24,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/ldd"
+	"github.com/mvdan/u-root-coreutils/pkg/ldd"
 )
 
 func main() {

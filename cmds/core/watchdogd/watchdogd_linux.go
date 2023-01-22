@@ -35,8 +35,8 @@ import (
 	"time"
 
 	flag "github.com/spf13/pflag"
-	"github.com/u-root/u-root/pkg/watchdog"
-	"github.com/u-root/u-root/pkg/watchdogd"
+	"github.com/mvdan/u-root-coreutils/pkg/watchdog"
+	"github.com/mvdan/u-root-coreutils/pkg/watchdogd"
 )
 
 func usage() {

@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/u-root/u-root/pkg/boot/boottest"
-	"github.com/u-root/u-root/pkg/ulog/ulogtest"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/boottest"
+	"github.com/mvdan/u-root-coreutils/pkg/ulog/ulogtest"
 )
 
 var blsEntries = []struct {

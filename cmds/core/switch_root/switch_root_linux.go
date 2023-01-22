@@ -13,7 +13,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/u-root/u-root/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
 )
 
 var (

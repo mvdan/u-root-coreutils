@@ -10,8 +10,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/u-root/u-root/pkg/cpio"
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/cpio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // CatInitrds concatenates initrds on first ReadAt call from a list of

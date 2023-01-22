@@ -15,11 +15,11 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/u-root/u-root/pkg/boot/linux"
-	"github.com/u-root/u-root/pkg/curl"
-	"github.com/u-root/u-root/pkg/mount"
-	"github.com/u-root/u-root/pkg/uio"
-	"github.com/u-root/u-root/pkg/vfile"
+	"github.com/mvdan/u-root-coreutils/pkg/boot/linux"
+	"github.com/mvdan/u-root-coreutils/pkg/curl"
+	"github.com/mvdan/u-root-coreutils/pkg/mount"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/vfile"
 	"golang.org/x/sys/unix"
 )
 

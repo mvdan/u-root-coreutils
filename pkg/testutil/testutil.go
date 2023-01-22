@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/u-root/gobusybox/src/pkg/golang"
-	"github.com/u-root/u-root/pkg/cmdline"
+	"github.com/mvdan/u-root-coreutils/pkg/cmdline"
 )
 
 // CheckError is a helper function for tests

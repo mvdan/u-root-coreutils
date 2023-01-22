@@ -9,7 +9,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/u-root/u-root/pkg/uio"
+	"github.com/mvdan/u-root-coreutils/pkg/uio"
 )
 
 // Action is a TestEvent action.
